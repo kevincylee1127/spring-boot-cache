@@ -5,8 +5,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * ClassName: User
+ * 
+ * @author Chen Yuan Lee (Kevin)
+ * @version 1.0
+ * @createTime: 2018/07/15 20:42:52
+ */
+
 @Entity
-@Table(name ="User")
+@Table(name = "User")
 public class User {
 
 	@Id

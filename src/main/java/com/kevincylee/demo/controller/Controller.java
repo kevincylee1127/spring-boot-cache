@@ -14,10 +14,18 @@ import org.springframework.web.servlet.ModelAndView;
 import com.kevincylee.demo.entity.User;
 import com.kevincylee.demo.service.UserService;
 
+/**
+ * ClassName: Controller
+ * 
+ * @author Chen Yuan Lee (Kevin)
+ * @version 1.0
+ * @createTime: 2018/07/15 20:42:52
+ */
+
 @RestController
 public class Controller {
-	
-	private final static Logger logger = LoggerFactory.getLogger(Controller.class); 
+
+	private final static Logger logger = LoggerFactory.getLogger(Controller.class);
 
 	@Autowired
 	UserService service;
@@ -31,17 +39,17 @@ public class Controller {
 		modelAndView.setViewName("index");
 		return modelAndView;
 	}
-	
+
 	@GetMapping("/{name}")
 	public String getUserByName(@PathVariable String name) {
 		logger.info("Request /{name}");
 		return service.findByName(name).getEmail();
 	}
-	
+
 	@GetMapping("/get")
 	public String getUserById(@RequestParam Integer id) {
 		logger.info("Request /get");
 		return service.findById(id).getName();
 	}
-	
+
 }
