@@ -23,7 +23,7 @@ spring:
       ddl-auto: create-drop
     show-sql: true
     format_sql: true
-  cache:
-    type: caffeine
-    caffeine:
-      spec: maximumSize=10,expireAfterWrite=5s
+#  cache:
+#    type: caffeine
+#    caffeine:
+#      spec: maximumSize=10,expireAfterWrite=5s
